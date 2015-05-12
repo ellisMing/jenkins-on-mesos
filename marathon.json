@@ -6,7 +6,7 @@
 		"JAVA_OPTS": "-Xmx300m"
    },
    "uris": [
-      "http://get.dataman.io/jenkins-on-mesos.tgz"
+      "http://get.dataman.io/packages/jenkins-on-mesos.tgz"
    ],
    "cmd": "cd jenkins-on-mesos && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
    "healthChecks": [
