@@ -1,13 +1,15 @@
 {
-	"id": "jenkins",
-	"instances": 1,
-	"mem": 1000,
-	"env": {
-		"JAVA_OPTS": "-Xmx300m"
+  "id": "jenkins",
+  "instances": 1,
+  "mem": 1000,
+  "env": {
+    "JAVA_OPTS": "-Xmx300m",
+    "SCM_SYNC_GIT": $SCM_SYNC_GIT
    },
    "uris": [
       "http://get.dataman.io/packages/jenkins-on-mesos.tgz"
    ],
+   "user": $APP_USER,
    "cmd": "cd jenkins-on-mesos && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
    "healthChecks": [
     {
