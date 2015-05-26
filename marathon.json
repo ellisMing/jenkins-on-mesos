@@ -10,7 +10,7 @@
       "http://get.dataman.io/packages/jenkins-on-mesos.tgz"
    ],
    "user": $APP_USER,
-   "cmd": "cd jenkins-on-mesos && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
+   "cmd": "export HOME=$(pwd) && git config --global user.name $APP_USER && git config --global user.email $APP_USER@$HOST && git clone $SCM_SYNC_GIT tmp && cp -r tmp/* jenkins-on-mesos && rm -rf tmp && cd jenkins-on-mesos && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
    "healthChecks": [
     {
       "protocol": "HTTP",

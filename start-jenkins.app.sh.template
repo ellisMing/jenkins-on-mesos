@@ -1,4 +1,7 @@
+# Sync the config with SCM_SYNC_GIT
+# SCM_SYNC_GIT format: git@gitlab.dataman.io:wtzhou/jenkins-on-mesos.git
 export SCM_SYNC_GIT=
+# deploy jenkins on marathon as APP_USER
 export APP_USER=
 curl -v -X POST \
 -H 'Accept: application/json' \
