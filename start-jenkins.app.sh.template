@@ -1,8 +1,16 @@
+#! /bin/bash
+
 # Sync the config with SCM_SYNC_GIT
 # SCM_SYNC_GIT format: git@gitlab.dataman.io:wtzhou/jenkins-on-mesos.git
-export SCM_SYNC_GIT=
-# deploy jenkins on marathon as APP_USER
-export APP_USER=
+SCM_SYNC_GIT=
+# deploy jenkins on marathon as user APP_USER, who has been granted to pull/push repo SCM_SYNC_GIT
+APP_USER=
+
+
+# Replace the given value in marathon.json
+sed -i s#\<SCM_SYNC_GIT\>#$SCM_SYNC_GIT# marathon.json
+sed -i s/\<USER\>/$APP_USER/ marathon.json
+
 curl -v -X POST \
 -H 'Accept: application/json' \
 -H 'Accept-Encoding: gzip, deflate' \
