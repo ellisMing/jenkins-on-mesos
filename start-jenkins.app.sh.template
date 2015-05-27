@@ -3,9 +3,12 @@
 # Sync the config with SCM_SYNC_GIT
 # SCM_SYNC_GIT format: git@gitlab.dataman.io:wtzhou/jenkins-on-mesos.git
 SCM_SYNC_GIT=
+
 # deploy jenkins on marathon as user APP_USER, who has been granted to pull/push repo SCM_SYNC_GIT
 APP_USER=
 
+# Marathon PORTAL, for example: http://192.168.3.4:8080/v2/apps
+MARATHON_PORTAL=
 
 # Replace the given value in marathon.json
 sed -i s#\<SCM_SYNC_GIT\>#$SCM_SYNC_GIT# marathon.json
@@ -17,4 +20,4 @@ curl -v -X POST \
 -H 'Content-Type: application/json; charset=utf-8' \
 -H 'User-Agent: HTTPie/0.8.0' \
 -d@marathon.json \
-http://192.168.3.4:8080/v2/apps
+$MARATHON_PORTAL
