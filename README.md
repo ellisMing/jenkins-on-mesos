@@ -5,7 +5,7 @@ Jenkins standalone instance package with the Mesos plugin pre-installed. Besides
 
 ###How to use it quickly
 
-1. Wget the start script template ``start-jenkins.app.sh.template`` and ``marathon.json``
+1. Wget the *start* script template ``start-jenkins.app.sh.template`` and ``marathon.json``
 
   ```bash
   $wget https://raw.githubusercontent.com/Dataman-Cloud/jenkins-on-mesos/master/start-jenkins.app.sh.template
@@ -16,7 +16,7 @@ Jenkins standalone instance package with the Mesos plugin pre-installed. Besides
 
   We have to create a git repo named **jenkins-on-mesos**, such as **git@gitlab.dataman.io:core/jenkins-on-mesos.git**, to persist jenkins master data, which is needed by plugin [SCM Sync configuration plugin](https://wiki.jenkins-ci.org/display/JENKINS/SCM+Sync+configuration+plugin). BTW, make sure there is one user on mesos-slave can pull/push the repo. 
 
-3. Edit to get your start script
+3. Edit to get your *start* script
 
   ```bash
   $cp start-jenkins.app.sh.template start-jenkins.app.sh
@@ -28,6 +28,12 @@ Jenkins standalone instance package with the Mesos plugin pre-installed. Besides
   1. **SCM_SYNC_GIT**: The above git repo addr, here is my example ``git@gitlab.dataman.io:core/jenkins-on-mesos.git``
   2. **APP_USER**: will deploy jenkins on marathon as user APP_USER, **who must have been granted to pull/push repo    SCM_SYNC_GIT** since jenkins will sync the configure with git repo **SCM_SYNC_GIT**.
   3. **MARATHON_PORTAL**: Marathon PORTAL, for example: http://marathon.dataman.io:8080/v2/apps
+  
+4. Run the *start* script to deploy a new jenkins master on marathon
+
+  ```bash
+  bash start-jenkins.app.sh
+  ```
 
 
 ###Features
