@@ -14,7 +14,7 @@ Jenkins standalone instance package with the Mesos plugin pre-installed. Besides
 
 2. Create a git repo on your private repo server or github to persist jenkins' data
 
-  We have to create a git repo named **jenkins-on-mesos**, such as **git@gitlab.dataman.io:core/jenkins-on-mesos.git**, to persist jenkins master data, which is needed by plugin [SCM Sync configuration plugin](https://wiki.jenkins-ci.org/display/JENKINS/SCM+Sync+configuration+plugin). BTW, make sure one given user can pull/push the repo. 
+  We have to create a git repo named **jenkins-on-mesos**, such as **git@gitlab.dataman.io:core/jenkins-on-mesos.git**, to persist jenkins master data, which is needed by plugin [SCM Sync configuration plugin](https://wiki.jenkins-ci.org/display/JENKINS/SCM+Sync+configuration+plugin). BTW, make sure there is one user on mesos-slave can pull/push the repo. 
 
 3. Edit to get your start script
 
