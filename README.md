@@ -37,7 +37,7 @@ Jenkins standalone instance package with the Mesos plugin pre-installed. Besides
 
 5. Register jenkins master as mesos framework
 
-  We need visit jenkins-master configure page to edit section **Mesos Cloud**, set the **Mesos Master [hostname:port]** as your mesos entry. [more detail](http://www.ebaytechblog.com/2014/05/12/delivering-ebays-ci-solution-with-apache-mesos-part-ii/)
+  We need visit jenkins-master configure page to edit section **Mesos Cloud**, set the **Mesos Master [hostname:port]** as your mesos entry. [more config detail](http://www.ebaytechblog.com/2014/05/12/delivering-ebays-ci-solution-with-apache-mesos-part-ii/)
 
 ###Features
 
