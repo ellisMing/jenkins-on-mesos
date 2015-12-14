@@ -2,7 +2,7 @@
 
 # Sync the config with SCM_SYNC_GIT
 # SCM_SYNC_GIT format: git@gitlab.dataman.io:wtzhou/jenkins-on-mesos.git
-SCM_SYNC_GIT=https://github.com/Dataman-Cloud/jenkins-on-mesos.git
+SCM_SYNC_GIT=https://github.com/ellisMing/jenkins-on-mesos.git
 
 # deploy jenkins on marathon as user APP_USER, who has been granted to pull/push repo SCM_SYNC_GIT
 APP_USER=ellisMing
