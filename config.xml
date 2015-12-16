@@ -18,7 +18,7 @@
     <org.jenkinsci.plugins.mesos.MesosCloud plugin="mesos@0.7.0-SNAPSHOT">
       <name>MesosCloud</name>
       <nativeLibraryPath>/usr/local/lib/libmesos.so</nativeLibraryPath>
-      <master>192.168.2.171:5050:5050</master>
+      <master>192.168.2.187:5050:5050</master>
       <description></description>
       <frameworkName>Jenkins Scheduler</frameworkName>
       <slavesUser>root</slavesUser>
