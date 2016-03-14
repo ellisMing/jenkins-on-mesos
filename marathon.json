@@ -4,12 +4,12 @@
   "mem": 1000,
   "env": {
     "JAVA_OPTS": "-Xmx300m",
-    "SCM_SYNC_GIT": "https://github.com/Dataman-Cloud/jenkins-on-mesos.git"
+    "SCM_SYNC_GIT": "<SCM_SYNC_GIT>"
    },
    "uris": [
       "http://get.dataman.io/packages/jenkins-on-mesos.tgz"
    ],
-   "user": "ellisMing",
+   "user": "<USER>",
    "cmd": "export HOME=$(pwd) && git config --global user.name `whoami` && git config --global user.email `whoami`@$HOST && git clone $SCM_SYNC_GIT tmp && cp -r tmp/* jenkins-on-mesos && rm -rf tmp && cd jenkins-on-mesos && sed -i -e s#GIT_REPO_URL#$SCM_SYNC_GIT# scm-sync-configuration.xml && export JENKINS_HOME=$(pwd) && export JENKINS_URL=http://$MESOS_HOSTNAME:$PORT0 && java $JAVA_OPTS -jar jenkins.war --httpPort=$PORT0",
    "healthChecks": [
     {
