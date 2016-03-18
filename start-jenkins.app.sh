@@ -8,7 +8,7 @@ SCM_SYNC_GIT=https://github.com/ellisMing/jenkins-on-mesos.git
 APP_USER=ellisMing
 
 # Marathon PORTAL, for example: http://192.168.3.4:8080/v2/apps
-MARATHON_PORTAL=http://172.16.1.159:8080/v2/apps
+MARATHON_PORTAL=http://172.16.1.176:8080/v2/apps
 
 # Replace the given value in marathon.json
 sed -i s#\<SCM_SYNC_GIT\>#$SCM_SYNC_GIT# marathon.json
